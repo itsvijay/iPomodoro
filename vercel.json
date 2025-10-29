@@ -1,0 +1,15 @@
+# Vercel Configuration
+# This file configures how Vercel builds and deploys your app
+
+[build]
+command = "npm run build"
+publish = ".next"
+
+[build.environment]
+NODE_VERSION = "18"
+
+[[redirects]]
+source = "/(.*)"
+destination = "/$1"
+status = 200
+
